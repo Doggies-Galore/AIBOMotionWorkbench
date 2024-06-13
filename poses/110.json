@@ -1,0 +1,289 @@
+{
+    "Poses": [
+        {
+            "Pose": "Sleep",
+            "JointPositions": [
+                {
+                    "JointName": "HEAD_PITCH",
+                    "Angle_urad": 1446772736,
+                    "Angle_degrees": 82893.97167657115
+                },
+                {
+                    "JointName": "HEAD_YAW",
+                    "Angle_urad": 65533,
+                    "Angle_degrees": 3.7547643183405532
+                },
+                {
+                    "JointName": "HEAD_ROLL",
+                    "Angle_urad": 0,
+                    "Angle_degrees": 0.0
+                },
+                {
+                    "JointName": "MOUTH",
+                    "Angle_urad": 0,
+                    "Angle_degrees": 0.0
+                },
+                {
+                    "JointName": "FR_LEG_VERT",
+                    "Angle_urad": 1378942976,
+                    "Angle_degrees": 79007.61270369332
+                },
+                {
+                    "JointName": "FR_LEG_LAT",
+                    "Angle_urad": -840892407,
+                    "Angle_degrees": -48179.58593940613
+                },
+                {
+                    "JointName": "FR_LEG_KNEE",
+                    "Angle_urad": -1491861508,
+                    "Angle_degrees": -85477.36801526147
+                },
+                {
+                    "JointName": "FL_LEG_VERT",
+                    "Angle_urad": 1378942986,
+                    "Angle_degrees": 79007.61327665111
+                },
+                {
+                    "JointName": "FL_LEG_LAT",
+                    "Angle_urad": -840892407,
+                    "Angle_degrees": -48179.58593940613
+                },
+                {
+                    "JointName": "FL_LEG_KNEE",
+                    "Angle_urad": -1491861508,
+                    "Angle_degrees": -85477.36801526147
+                },
+                {
+                    "JointName": "BR_LEG_VERT",
+                    "Angle_urad": -1266024438,
+                    "Angle_degrees": -72537.85704835047
+                },
+                {
+                    "JointName": "BR_LEG_LAT",
+                    "Angle_urad": 65506,
+                    "Angle_degrees": 3.753217332293902
+                },
+                {
+                    "JointName": "BR_LEG_KNEE",
+                    "Angle_urad": -1582235648,
+                    "Angle_degrees": -90655.42481370979
+                },
+                {
+                    "JointName": "BL_LEG_VERT",
+                    "Angle_urad": -1266024422,
+                    "Angle_degrees": -72537.85613161801
+                },
+                {
+                    "JointName": "BL_LEG_LAT",
+                    "Angle_urad": 65506,
+                    "Angle_degrees": 3.753217332293902
+                },
+                {
+                    "JointName": "BL_LEG_KNEE",
+                    "Angle_urad": -1582235648,
+                    "Angle_degrees": -90655.42481370979
+                },
+                {
+                    "JointName": "TAIL_VERT",
+                    "Angle_urad": 26,
+                    "Angle_degrees": 0.0014896902671456271
+                },
+                {
+                    "JointName": "TAIL_HORZ",
+                    "Angle_urad": 0,
+                    "Angle_degrees": 0.0
+                }
+            ]
+        },
+        {
+            "Pose": "Sit",
+            "JointPositions": [
+                {
+                    "JointName": "HEAD_PITCH",
+                    "Angle_urad": 0,
+                    "Angle_degrees": 0.0
+                },
+                {
+                    "JointName": "HEAD_YAW",
+                    "Angle_urad": 908722176,
+                    "Angle_degrees": 52065.94542794598
+                },
+                {
+                    "JointName": "HEAD_ROLL",
+                    "Angle_urad": 65527,
+                    "Angle_degrees": 3.7544205436635196
+                },
+                {
+                    "JointName": "MOUTH",
+                    "Angle_urad": 0,
+                    "Angle_degrees": 0.0
+                },
+                {
+                    "JointName": "FR_LEG_VERT",
+                    "Angle_urad": 0,
+                    "Angle_degrees": 0.0
+                },
+                {
+                    "JointName": "FR_LEG_LAT",
+                    "Angle_urad": 45219840,
+                    "Angle_degrees": 2590.905981918558
+                },
+                {
+                    "JointName": "FR_LEG_KNEE",
+                    "Angle_urad": 65528,
+                    "Angle_degrees": 3.7544778394430254
+                },
+                {
+                    "JointName": "FL_LEG_VERT",
+                    "Angle_urad": -22609920,
+                    "Angle_degrees": -1295.452990959279
+                },
+                {
+                    "JointName": "FL_LEG_LAT",
+                    "Angle_urad": 45219843,
+                    "Angle_degrees": 2590.906153805897
+                },
+                {
+                    "JointName": "FL_LEG_KNEE",
+                    "Angle_urad": 65528,
+                    "Angle_degrees": 3.7544778394430254
+                },
+                {
+                    "JointName": "BR_LEG_VERT",
+                    "Angle_urad": -22609920,
+                    "Angle_degrees": -1295.452990959279
+                },
+                {
+                    "JointName": "BR_LEG_LAT",
+                    "Angle_urad": -1333788669,
+                    "Angle_degrees": -76420.46148609309
+                },
+                {
+                    "JointName": "BR_LEG_KNEE",
+                    "Angle_urad": 65518,
+                    "Angle_degrees": 3.753904881647969
+                },
+                {
+                    "JointName": "BL_LEG_VERT",
+                    "Angle_urad": 1266024448,
+                    "Angle_degrees": 72537.85762130827
+                },
+                {
+                    "JointName": "BL_LEG_LAT",
+                    "Angle_urad": -1333788643,
+                    "Angle_degrees": -76420.45999640283
+                },
+                {
+                    "JointName": "BL_LEG_KNEE",
+                    "Angle_urad": 65518,
+                    "Angle_degrees": 3.753904881647969
+                },
+                {
+                    "JointName": "TAIL_VERT",
+                    "Angle_urad": 1266024448,
+                    "Angle_degrees": 72537.85762130827
+                },
+                {
+                    "JointName": "TAIL_HORZ",
+                    "Angle_urad": 29,
+                    "Angle_degrees": 0.0016615776056624304
+                }
+            ]
+        },
+        {
+            "Pose": "Stand",
+            "JointPositions": [
+                {
+                    "JointName": "HEAD_PITCH",
+                    "Angle_urad": 0,
+                    "Angle_degrees": 0.0
+                },
+                {
+                    "JointName": "HEAD_YAW",
+                    "Angle_urad": 0,
+                    "Angle_degrees": 0.0
+                },
+                {
+                    "JointName": "HEAD_ROLL",
+                    "Angle_urad": 0,
+                    "Angle_degrees": 0.0
+                },
+                {
+                    "JointName": "MOUTH",
+                    "Angle_urad": 0,
+                    "Angle_degrees": 0.0
+                },
+                {
+                    "JointName": "FR_LEG_VERT",
+                    "Angle_urad": 0,
+                    "Angle_degrees": 0.0
+                },
+                {
+                    "JointName": "FR_LEG_LAT",
+                    "Angle_urad": 0,
+                    "Angle_degrees": 0.0
+                },
+                {
+                    "JointName": "FR_LEG_KNEE",
+                    "Angle_urad": 1446772736,
+                    "Angle_degrees": 82893.97167657115
+                },
+                {
+                    "JointName": "FL_LEG_VERT",
+                    "Angle_urad": 65533,
+                    "Angle_degrees": 3.7547643183405532
+                },
+                {
+                    "JointName": "FL_LEG_LAT",
+                    "Angle_urad": -45219840,
+                    "Angle_degrees": -2590.905981918558
+                },
+                {
+                    "JointName": "FL_LEG_KNEE",
+                    "Angle_urad": 1446772743,
+                    "Angle_degrees": 82893.9720776416
+                },
+                {
+                    "JointName": "BR_LEG_VERT",
+                    "Angle_urad": 65533,
+                    "Angle_degrees": 3.7547643183405532
+                },
+                {
+                    "JointName": "BR_LEG_LAT",
+                    "Angle_urad": -45219840,
+                    "Angle_degrees": -2590.905981918558
+                },
+                {
+                    "JointName": "BR_LEG_KNEE",
+                    "Angle_urad": 1446772743,
+                    "Angle_degrees": 82893.9720776416
+                },
+                {
+                    "JointName": "BL_LEG_VERT",
+                    "Angle_urad": 65533,
+                    "Angle_degrees": 3.7547643183405532
+                },
+                {
+                    "JointName": "BL_LEG_LAT",
+                    "Angle_urad": -45219840,
+                    "Angle_degrees": -2590.905981918558
+                },
+                {
+                    "JointName": "BL_LEG_KNEE",
+                    "Angle_urad": 1446772743,
+                    "Angle_degrees": 82893.9720776416
+                },
+                {
+                    "JointName": "TAIL_VERT",
+                    "Angle_urad": 65533,
+                    "Angle_degrees": 3.7547643183405532
+                },
+                {
+                    "JointName": "TAIL_HORZ",
+                    "Angle_urad": -45219840,
+                    "Angle_degrees": -2590.905981918558
+                }
+            ]
+        }
+    ]
+}
