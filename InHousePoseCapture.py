@@ -1,4 +1,4 @@
-#Huge thanks to Dogsbody for giving me some handy file format info!
+#Huge thanks to Dogsbody for helping me with some handy file format info!
 #Snippets of this applet were developed with an LLM
 #Made with <3 by Doggies Galore
 

@@ -1,16 +1,16 @@
-#Huge thanks to Dogsbody for helping me with some handy file format info!
-#Snippets of this applet were developed with an LLM
-#Made with <3 by Doggies Galore
+# Huge thanks to Dogsbody for giving me some handy file format info!
+# Snippets of this applet were developed with an LLM
+# Made with <3 by Doggies Galore
 
 import struct
 import json
 
-# The expected Skitter signatrue.
+# Define constants based on the updated specifications
 SIGNATURE = b"OMTN"
 
 # Format strings for parsing Block0, the header, and keyframes
 BLOCK0_FORMAT = "<IIIHHHHI"
-BLOCK_HEADER_FORMAT = "<II"  
+BLOCK_HEADER_FORMAT = "<II"
 KEYFRAME_HEADER_FORMAT = "<HHII"
 
 # DRX to ERS model mapping
@@ -20,6 +20,12 @@ PLATFORM_MAP = {
     "DRX-900": "ERS-220",
     "DRX-801": "ERS-310",
     "DRX-1000": "ERS-7"
+}
+
+PoseNameLookup = {
+    0: "Sleep",
+    1: "Sit",
+    2: "Stand"
 }
 
 # joint PRM to movement names are stored in a JSON dict.
@@ -58,7 +64,7 @@ def parse_mtn_file(filename):
         # Read and verify the signature
         signature = f.read(4)
         if signature != SIGNATURE:
-            print ("File format warning: Signature mismatch. Some AIBOWare may have different headers. If you know what you're doing, you can safely disregard.")
+            print("File format warning: Signature mismatch. Some AIBOWare may have different headers. If you know what you're doing, you can safely disregard.")
 
         # Read block 0
         block0_header = f.read(struct.calcsize(BLOCK0_FORMAT))
@@ -95,23 +101,17 @@ def parse_mtn_file(filename):
                 print(f"Action information:")
                 print(parse_chunk_name(action_chunk_name))
                 print(f"  Author/Utility name: {author_name}")
-                print(f"  AIBO platform: {ers_format_name}")
+                print(f"  Format (aibo-platform): {ers_format_name}")
 
             elif block_index == 2:
                 # Read servo count and get joints in action
                 num_joints = struct.unpack("<H", f.read(2))[0]
                 print(f"  Number of Joints: {num_joints}")
 
-                # Read servo PRM joint names
                 prm_codes = []
                 print("  Servo PRM Joint Names:")
                 for _ in range(num_joints):
-                    prm_string = read_variable_length_string(f)
-                    prm_split = prm_string.split("PRM:")
-                    if len(prm_split) > 1:
-                        prm_code = "PRM:" + prm_split[1]
-                    else:
-                        prm_code = prm_string  # Handle the case where "PRM:" is not found
+                    prm_code = "PRM:" + read_variable_length_string(f).split("PRM:")[1]
                     prm_codes.append(prm_code)
                     print(f"    PRM Code: {prm_code}")
 
@@ -122,33 +122,66 @@ def parse_mtn_file(filename):
                     else:
                         print(f"    Joint Name: Not found in joints.json for {ers_format_name}")
 
-            elif block_index == 3:
-                print("  Keyframes:")
+            elif block_index > 2:
+                print(f"\nMTN Block {block_num}:")
+                print(f"  Block Length: {block_len}")
+
+                # Read keyframes
+                keyframes = []
                 for keyframe_index in range(tile_count):
-                    # Read keyframe header
                     keyframe_header = f.read(struct.calcsize(KEYFRAME_HEADER_FORMAT))
                     if not keyframe_header:
                         break
                     time_delta, dummy1, dummy2, dummy3 = struct.unpack(KEYFRAME_HEADER_FORMAT, keyframe_header)
-                    
-                    # Compute elapsed time between keyframes
-                    time_msecs = (time_delta + 1) * frame_rate
-                    print(f"  Keyframe {keyframe_index + 1}:")
-                    print(f"    Time Delta: {time_delta}, Elapsed Time (msec): {time_msecs}")
 
-                    # Read and display servo positions in both urad and degrees
+                    keyframe_positions = []
                     for joint_index in range(num_joints):
                         angle_uradians = struct.unpack("<i", f.read(4))[0]
                         angle_degrees = angle_uradians * 180.0 / (1000000.0 * 3.141592654)
                         joint_name = JOINTS_MAP[ers_format_name].get(prm_codes[joint_index], f"Unknown joint {joint_index + 1}")
-                        print(f"    {joint_name}: {angle_uradians} urad, {angle_degrees:.2f} degrees")
+                        keyframe_positions.append({
+                            "JointName": joint_name,
+                            "Angle_urad": angle_uradians,
+                            "Angle_degrees": angle_degrees
+                        })
+
+                    keyframes.append(keyframe_positions)
+
+                json_filename = f"./poses/{ers_format_name}.json"
+                with open(json_filename, 'r') as json_file:
+                    json_data = json.load(json_file)
+
+                    # Get all poses from JSON
+                    poses = json_data["Poses"]
+
+                    for pose_idx, pose_data in enumerate(poses):
+                        expected_positions = pose_data["JointPositions"]
+                        matching_keyframes = []
+
+                        for kf_idx, kf_positions in enumerate(keyframes):
+                            keyframe_matching = True
+                            for pos1, pos2 in zip(kf_positions, expected_positions):
+                                if pos1["Angle_degrees"] != pos2["Angle_degrees"]:
+                                    if abs(pos1["Angle_degrees"] - pos2["Angle_degrees"]) > 5:
+                                        keyframe_matching = False
+                                        break
+                            if keyframe_matching:
+                                matching_keyframes.append(kf_idx)
+
+                        if matching_keyframes:
+                            print(f"Pose {PoseNameLookup[pose_idx]} matched in keyframes: {matching_keyframes}")
+
+                        # Print result for this pose
+                        for kf_idx in matching_keyframes:
+                            print(f"Pose {PoseNameLookup[pose_idx]} matched in keyframe {kf_idx}:")
+                            print("The standard " + PoseNameLookup[pose_idx] + " pose for " + ers_format_name + " was found.")
 
             # Move file pointer to the start of the next block
             current_offset += block_len
             f.seek(current_offset)
 
 if __name__ == "__main__":
-    filename = "Snap_converted.mtn" 
+    filename = "S2S.mtn"
     print("Opening and running processing for " + filename)
     parse_mtn_file(filename)
     print("Finished.")

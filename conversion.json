@@ -1,0 +1,149 @@
+{
+    "HEAD_PITCH": {
+        "ERS-110": "PRM:/r0/c0-Joint:j0",
+        "ERS-210": "PRM:/r1/c1-Joint2:j1",
+        "ERS-220": "PRM:/r1/c1-Joint2:j1",
+        "ERS-310": "PRM:/r1/c1-Joint2:11",
+        "ERS-7": "PRM:/r1/c1-Joint2:11"
+    },
+    "HEAD_YAW": {
+        "ERS-110": "PRM:/r0/c0/c1-Joint:j1",
+        "ERS-210": "PRM:/r1/c1/c2-Joint2:j2",
+        "ERS-220": "PRM:/r1/c1/c2-Joint2:j2",
+        "ERS-310": "PRM:/r1/c1/c2-Joint2:12",
+        "ERS-7": "PRM:/r1/c1/c2-Joint2:12"
+    },
+    "HEAD_ROLL": {
+        "ERS-110": "PRM:/r0/c0/c1/c2-Joint:j2",
+        "ERS-210": "PRM:/r1/c1/c2/c3-Joint2:j3",
+        "ERS-220": "PRM:/r1/c1/c2/c3-Joint2:j3",
+        "ERS-310": "-",
+        "ERS-7": "PRM:/r1/c1/c2/c3-Joint2:13"
+    },
+    "MOUTH": {
+        "ERS-110": "PRM:/r0/c0/c1/c2/c3-Joint:j3",
+        "ERS-210": "PRM:/r1/c1/c2/c3/c4-Joint2:j4",
+        "ERS-220": "PRM:/r1/c1/c2/c3/c4-Joint2:j4",
+        "ERS-310": "-",
+        "ERS-7": "PRM:/r1/c1/c2/c3/c4-Joint2:14"
+    },
+    "LEFT_EAR": {
+        "ERS-110": "-",
+        "ERS-210": "PRM:/r1/c1/c2/c3/e1-Joint3:j5",
+        "ERS-220": "PRM:/r1/c1/c2/c3/e1-Joint3:j5",
+        "ERS-310": "-",
+        "ERS-7": "PRM:/r1/c1/c2/c3/e5-Joint4:15"
+    },
+    "RIGHT_EAR": {
+        "ERS-110": "-",
+        "ERS-210": "PRM:/r1/c1/c2/c3/e2-Joint3:j6",
+        "ERS-220": "PRM:/r1/c1/c2/c3/e2-Joint3:j6",
+        "ERS-310": "-",
+        "ERS-7": "PRM:/r1/c1/c2/c3/e6-Joint4:16"
+    },
+    "FL_LEG_VERT": {
+        "ERS-110": "PRM:/r3/c0-Joint:j0",
+        "ERS-210": "PRM:/r2/c1-Joint2:j1",
+        "ERS-220": "PRM:/r2/c1-Joint2:j1",
+        "ERS-310": "PRM:/r2/c1-Joint2:21",
+        "ERS-7": "PRM:/r2/c1-Joint2:21"
+    },
+    "FL_LEG_LAT": {
+        "ERS-110": "PRM:/r3/c0/c1-Joint:j1",
+        "ERS-210": "PRM:/r2/c1/c2-Joint2:j2",
+        "ERS-220": "PRM:/r2/c1/c2-Joint2:j2",
+        "ERS-310": "PRM:/r2/c1/c2-Joint2:22",
+        "ERS-7": "PRM:/r2/c1/c2-Joint2:22"
+    },
+    "FL_LEG_KNEE": {
+        "ERS-110": "PRM:/r3/c0/c1/c2-Joint:j2",
+        "ERS-210": "PRM:/r2/c1/c2/c3-Joint2:j3",
+        "ERS-220": "PRM:/r2/c1/c2/c3-Joint2:j3",
+        "ERS-310": "PRM:/r2/c1/c2/c3-Joint2:23",
+        "ERS-7": "PRM:/r2/c1/c2/c3-Joint2:23"
+    },
+    "BL_LEG_VERT": {
+        "ERS-110": "PRM:/r5/c0-Joint:j0",
+        "ERS-210": "PRM:/r3/c1-Joint2:j1",
+        "ERS-220": "PRM:/r3/c1-Joint2:j1",
+        "ERS-310": "PRM:/r3/c1-Joint2:31",
+        "ERS-7": "PRM:/r3/c1-Joint2:31"
+    },
+    "BL_LEG_LAT": {
+        "ERS-110": "PRM:/r5/c0/c1-Joint:j1",
+        "ERS-210": "PRM:/r3/c1/c2-Joint2:j2",
+        "ERS-220": "PRM:/r3/c1/c2-Joint2:j2",
+        "ERS-310": "PRM:/r3/c1/c2-Joint2:32",
+        "ERS-7": "PRM:/r3/c1/c2-Joint2:32"
+    },
+    "BL_LEG_KNEE": {
+        "ERS-110": "PRM:/r5/c0/c1/c2-Joint:j2",
+        "ERS-210": "PRM:/r3/c1/c2/c3-Joint2:j3",
+        "ERS-220": "PRM:/r3/c1/c2/c3-Joint2:j3",
+        "ERS-310": "PRM:/r3/c1/c2/c3-Joint2:33",
+        "ERS-7": "PRM:/r3/c1/c2/c3-Joint2:33"
+    },
+    "FR_LEG_VERT": {
+        "ERS-110": "PRM:/r2/c0-Joint:j0",
+        "ERS-210": "PRM:/r4/c1-Joint2:j1",
+        "ERS-220": "PRM:/r4/c1-Joint2:j1",
+        "ERS-310": "PRM:/r4/c1-Joint2:41",
+        "ERS-7": "PRM:/r4/c1-Joint2:41"
+    },
+    "FR_LEG_LAT": {
+        "ERS-110": "PRM:/r2/c0/c1-Joint:j1",
+        "ERS-210": "PRM:/r4/c1/c2-Joint2:j2",
+        "ERS-220": "PRM:/r4/c1/c2-Joint2:j2",
+        "ERS-310": "PRM:/r4/c1/c2-Joint2:42",
+        "ERS-7": "PRM:/r4/c1/c2-Joint2:42"
+    },
+    "FR_LEG_KNEE": {
+        "ERS-110": "PRM:/r2/c0/c1/c2-Joint:j2",
+        "ERS-210": "PRM:/r4/c1/c2/c3-Joint2:j3",
+        "ERS-220": "PRM:/r4/c1/c2/c3-Joint2:j3",
+        "ERS-310": "PRM:/r4/c1/c2/c3-Joint2:43",
+        "ERS-7": "PRM:/r4/c1/c2/c3-Joint2:43"
+    },
+    "BR_LEG_VERT": {
+        "ERS-110": "PRM:/r4/c0-Joint:j0",
+        "ERS-210": "PRM:/r5/c1-Joint2:j1",
+        "ERS-220": "PRM:/r5/c1-Joint2:j1",
+        "ERS-310": "PRM:/r5/c1-Joint2:51",
+        "ERS-7": "PRM:/r5/c1-Joint2:51"
+    },
+    "BR_LEG_LAT": {
+        "ERS-110": "PRM:/r4/c0/c1-Joint:j1",
+        "ERS-210": "PRM:/r5/c1/c2-Joint2:j2",
+        "ERS-220": "PRM:/r5/c1/c2-Joint2:j2",
+        "ERS-310": "PRM:/r5/c1/c2-Joint2:52",
+        "ERS-7": "PRM:/r5/c1/c2-Joint2:52"
+    },
+    "BR_LEG_KNEE": {
+        "ERS-110": "PRM:/r4/c0/c1/c2-Joint:j2",
+        "ERS-210": "PRM:/r5/c1/c2/c3-Joint2:j3",
+        "ERS-220": "PRM:/r5/c1/c2/c3-Joint2:j3",
+        "ERS-310": "PRM:/r5/c1/c2/c3-Joint2:53",
+        "ERS-7": "PRM:/r5/c1/c2/c3-Joint2:53"
+    },
+    "TAIL_VERT": {
+        "ERS-110": "PRM:/r1/c0-Joint:j0",
+        "ERS-210": "PRM:/r6/c2-Joint2:j2",
+        "ERS-220": "PRM:/r6/c2-Joint2:j2",
+        "ERS-310": "-",
+        "ERS-7": "PRM:/r6/c1-Joint2:61"
+    },
+    "TAIL_HORZ": {
+        "ERS-110": "PRM:/r1/c1-Joint:j1",
+        "ERS-210": "PRM:/r6/c1-Joint2:j1",
+        "ERS-220": "PRM:/r6/c1-Joint2:j1",
+        "ERS-310": "-",
+        "ERS-7": "PRM:/r6/c2-Joint2:62"
+    },
+    "HEAD_PITCH2": {
+        "ERS-110": "-",
+        "ERS-210": "-",
+        "ERS-220": "-",
+        "ERS-310": "PRM:/r1/c1-Joint2:12",
+        "ERS-7": "PRM:/r1/c1/c2-Joint2:13"
+    }
+}
